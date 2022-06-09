@@ -1,0 +1,8 @@
+.task-input {
+    margin-bottom: 10px;
+}
+
+.task-item{
+    display: flex;
+    gap: 10px;
+}

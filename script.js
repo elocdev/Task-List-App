@@ -74,9 +74,11 @@ function renderTask() {
 
     tasks.forEach(function (tasks) {
         const element = document.createElement('div');
+        element.classList.add('task-item');
         element.innerText = tasks.title + ' ' + tasks.dueDate;
 
         const delButton = document.createElement('button');
+        delButton.classList.add('delete-button');
         delButton.innerText = 'Delete';
         delButton.style = 'margin-left: 12px;';
         delButton.onclick = deleteTask;

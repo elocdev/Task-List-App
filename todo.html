@@ -3,14 +3,17 @@
 <head>
   <meta charset="utf-8">
   <title>Task List App</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
   
 </head>
 
 <body>
-  <input id="task-item" type="text"/>
-  <input id="date-picker" type="date"/>
-  <button onclick="addTask()">Add Task</button>
+  <div class="task-input">
+    <input id="task-item" type="text"/>
+    <input id="date-picker" type="date"/>
+    <button onclick="addTask()">Add Task</button>
+  </div>
+  
   <div id="task-list"></div>
   <script src="script.js"></script>
 </body>
