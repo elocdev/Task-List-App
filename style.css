@@ -65,6 +65,7 @@ input {
     cursor: pointer;
     transition: 0.3s;
     border-radius: 5px;
+    border: 1px solid #aaa;
     margin-left: 5px;
 }
   
@@ -78,3 +79,4 @@ input {
     right: 8px;
     transform: translateY(-50%);
 }
+
