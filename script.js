@@ -50,8 +50,13 @@ function saveTasks() {
 // Function to add task used in button HTML
 function addTask() {
     const taskItem = document.getElementById('task-item').value;
-    createTask(taskItem);
-    renderTask();
+    if (taskItem !== '') {
+        createTask(taskItem);
+        renderTask();
+    }
+    else {
+        alert('Please enter a task');
+    }
     document.getElementById('task-item').value = '';
 }
 
@@ -75,7 +80,7 @@ function renderTask() {
 
         const delButton = document.createElement('button');
         delButton.classList.add('delete-button');
-        delButton.innerText = 'Delete';
+        delButton.innerText = 'X';
         delButton.style = 'margin-left: 12px;';
         delButton.onclick = deleteTask;
         delButton.id = tasks.id;
