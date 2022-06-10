@@ -8,12 +8,11 @@
 </head>
 
 <body>
-  <div class="task-input">
-    <input id="task-item" type="text"/>
-    <input id="date-picker" type="date"/>
-    <button onclick="addTask()">Add Task</button>
+  <div id="myTasks" class="task-input">
+    <h2>My Task List</h2>
+    <input id="task-item" type="text" placeholder="Write Task Here...">
+    <span class="addBtn" onclick="addTask()">Add</span>
   </div>
-  
   <div id="task-list"></div>
   <script src="script.js"></script>
 </body>

@@ -7,15 +7,12 @@ if (Array.isArray(savedTasks)) {
 else {
     tasks = [{
         title: 'Get Groceries',
-        dueDate: '2020-01-01',
         id: 'id1'
         }, {
         title: 'Wash Car',
-        dueDate: '2020-01-01',
         id: 'id2'
         }, {
         title: 'Buy new tires',
-        dueDate: '2020-01-01',
         id: 'id3'
         }
     ];
@@ -23,11 +20,10 @@ else {
 
 renderTask();
 
-function createTask(title, dueDate) {
+function createTask(title) {
     const id = '' + new Date().getTime();
     tasks.push({
         title: title,
-        dueDate: dueDate,
         id: id
     });
 
@@ -54,9 +50,9 @@ function saveTasks() {
 // Function to add task used in button HTML
 function addTask() {
     const taskItem = document.getElementById('task-item').value;
-    const dueDate = document.getElementById('date-picker').value;
-    createTask(taskItem, dueDate);
+    createTask(taskItem);
     renderTask();
+    document.getElementById('task-item').value = '';
 }
 
 // Function to delete task
@@ -75,7 +71,7 @@ function renderTask() {
     tasks.forEach(function (tasks) {
         const element = document.createElement('div');
         element.classList.add('task-item');
-        element.innerText = tasks.title + ' ' + tasks.dueDate;
+        element.innerText = tasks.title;
 
         const delButton = document.createElement('button');
         delButton.classList.add('delete-button');
