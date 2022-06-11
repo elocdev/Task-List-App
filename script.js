@@ -43,14 +43,19 @@ function removeTask(idToDelete) {
     saveTasks();
 }
 
+
 function completeTask() {
-    var list = document.querySelector('task-item');
-    list.addEventListener('click', function(event){
-        if(event.target.className === 'task-item') {
-            event.target.classList.toggle('checked');
+    const checkMark = document.getElementById('unchecked');
+    checkMark.addEventListener("click", function(event){
+        if(event.target.id === 'unchecked'){
+            event.target.id = 'checked';
         }
-    }  , false);
+        else {
+            event.target.id = 'unchecked';
+        }
+    }, false);
 }
+
 
 
 function saveTasks() {
@@ -86,6 +91,8 @@ function renderTask() {
     tasks.forEach(function(tasks) {
         const element = document.createElement('div');
         element.classList.add('task-item');
+        element.setAttribute("id", "unchecked");
+        element.setAttribute("onclick", "completeTask()");
         element.innerText = tasks.title;
 
         const delButton = document.createElement('button');
