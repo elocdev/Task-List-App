@@ -73,7 +73,7 @@ function renderTask() {
     // Resetting Task List
     document.getElementById('task-list').innerHTML = '';
 
-    tasks.forEach(function (tasks) {
+    tasks.forEach(function(tasks) {
         const element = document.createElement('div');
         element.classList.add('task-item');
         element.innerText = tasks.title;
