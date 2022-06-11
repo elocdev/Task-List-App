@@ -43,6 +43,16 @@ function removeTask(idToDelete) {
     saveTasks();
 }
 
+function completeTask() {
+    var list = document.querySelector('task-item');
+    list.addEventListener('click', function(event){
+        if(event.target.className === 'task-item') {
+            event.target.classList.toggle('checked');
+        }
+    }  , false);
+}
+
+
 function saveTasks() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
