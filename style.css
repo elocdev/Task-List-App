@@ -20,12 +20,12 @@ body {
     clear: both;
 }
 
-#task-list {
+ul {
     margin: 0;
     padding: 0;
 }
 
-.task-item {
+ul li {
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
@@ -35,22 +35,22 @@ body {
     border-radius: 5px;
 }
 
-.task-item:nth-child(odd) {
+ul li:nth-child(odd) {
     background: #f9f9f9;
 
 }
 
-.task-item:hover {
+ul li:hover {
     background: #ddd;
 }
 
-#checked {
+ul li.checked {
     background: #888;
     color: #fff;
     text-decoration: line-through;
 }
 
-#checked::before {
+ul li.checked::before {
     content: '';
     position: absolute;
     border-color: #fff;
@@ -87,7 +87,7 @@ input {
     border: 1px solid #aaa;
     margin-left: 5px;
 }
-  
+
 .addBtn:hover {
     background-color: #bbb;
 }
